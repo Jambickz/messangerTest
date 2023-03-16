@@ -30,7 +30,7 @@ export async function messageInfoTemplate(message) {
 	const user = await getProfile(message.fromId)
 	return ce('div', {
 		className: `message__info`, content: `
-		<div class="message__photo"><img src="/${user.avatar}" alt="PHOTO"></div>
+		<div class="message__photo"><img src="./${user.avatar}" alt="PHOTO"></div>
 		<div class="message__name">${user.username}</div>
 		<div class="message__time">${formatDate(message.createdAt)}</div>`
 	})
@@ -43,7 +43,7 @@ export async function dialogInfoTemplate(user, dialogId) {
 		content: `
 		<div class="header__info">
 			<div class="header__status"></div>
-			<div class="header__photo"><img src="/${await infoUser(user.id, dialog, "avatar")}" alt="PHOTO"></div>
+			<div class="header__photo"><img src="./${await infoUser(user.id, dialog, "avatar")}" alt="PHOTO"></div>
 			<div class="header__name">${await infoUser(user.id, dialog, "username")}</div>
 			<div class="header__status-text">Online</div>
 		</div>
