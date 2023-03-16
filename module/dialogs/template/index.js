@@ -12,7 +12,7 @@ export async function dialogsList(user) {
 		return `
 		 <div class="dialog" data-id="${d.id}">
 			<div class="dialog__status"></div>
-			<div class="dialog__photo"><img src="/${avatar}" alt="PHOTO"></div>
+			<div class="dialog__photo"><img src="./${avatar}" alt="PHOTO"></div>
 			<div class="dialog__name">${username}</div>
 			<div class="dialog__preview">${preview}</div>
 		 </div>
